@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button bt;
-    private String s="Hello in Activity ";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +19,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bt=findViewById(R.id.button);
         bt.setOnClickListener(this);
-        Toast.makeText(getApplicationContext(),s+"one",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Hello from Activity one",Toast.LENGTH_LONG).show();
 
     }
 
     @Override
     public void onClick(View view) {
+
         Intent i = new Intent(MainActivity.this,MainActivity2.class);
 
-        i.setAction(i.ACTION_SEND);
-        i.putExtra("var",s);
+        i.putExtra("user",new user("osayd",21,116));
         startActivity(i);
 
     }

@@ -6,19 +6,34 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    private TextView text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        text = findViewById(R.id.textView);
+
         addfrag();
-        Intent I =getIntent();
-        String var;
-        var=I.getStringExtra("var");
-        Toast.makeText(getApplicationContext(),var+"two",Toast.LENGTH_LONG).show();
+
+        Toast.makeText(getApplicationContext(),"Hello from Activity two",Toast.LENGTH_LONG).show();
+
+        user u  ;
+        Intent intent= getIntent();
+        u=intent.getParcelableExtra("user");
+
+
+        String str =u.getname();
+        int a=u.getage();
+        int i=u.getid();
+        str += " "+a+" "+i;
+        text.setText(str.toString());
+
     }
     private void addfrag(){
         FragmentManager fm= getSupportFragmentManager();
