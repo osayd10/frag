@@ -59,6 +59,4 @@ public class User implements Parcelable {
         parcel.writeInt(mAge);
         parcel.writeInt(mId);
     }
-
-
 }

@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
             i.putExtra(EXTRA_USER, new User("osayd", 21, 116));
             startActivity(i);
         });
-
         Toast.makeText(getApplicationContext(), "Hello from Activity one", Toast.LENGTH_LONG).show();
     }
 }

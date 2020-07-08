@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+    <variable
+        name="user"
+        type="com.example.fragments.User" />
+</data>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,7 +23,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_weight="0.2"
-        android:text="@string/textview"
+        android:text="@{user.getName + user.getAge + user.getId}"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/lin2"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,3 +43,4 @@
         android:layout_weight="1.4" />
 
 </LinearLayout>
+</layout>
