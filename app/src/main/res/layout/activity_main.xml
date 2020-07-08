@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:id="@+id/Linearlayout1"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/lin"
-        android:layout_width="339dp"
-        android:layout_height="542dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55">
 
-        <fragment
-            android:id="@+id/fr2"
-            android:name="com.example.fragments.Fragment2"
-            android:layout_width="match_parent"
-            android:layout_height="233dp"
-            tools:layout="@layout/fragment_2" />
+    <fragment
+        android:id="@+id/fr1"
+        android:name="com.example.fragments.Fragment1"
+        android:layout_width="327dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        tools:layout="@layout/fragment_1" />
 
-        <fragment
-            android:id="@+id/fr1"
-            android:name="com.example.fragments.Fragment1"
-            android:layout_width="327dp"
-            android:layout_height="234dp"
-            tools:layout="@layout/fragment_1" />
+    <fragment
+        android:id="@+id/fr2"
+        android:name="com.example.fragments.Fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        tools:layout="@layout/fragment_2" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="126dp"
-            android:layout_height="wrap_content"
-            android:text="to Activity2" />
+    <Button
+        android:id="@+id/START_ACTIVITY_2_BUTTON"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:text="@string/to_activity2" />
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
